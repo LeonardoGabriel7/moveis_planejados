@@ -246,103 +246,205 @@ header {
     background-color: #1ebe59;
 }
 
+
+/*--------------------------------------------------
+  DIFERENCIAIS
+--------------------------------------------------*/
+.diferenciais {
+    background-color: #111;
+    color: #fff;
+    padding: 100px 0;
+}
+
+.diferenciais .section-title {
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 60px;
+    color: #C69C6D;
+}
+
+.diferenciais-grid {
+    display: flex;
+    justify-content: space-around;
+    gap: 40px;
+    flex-wrap: wrap;
+}
+
+.diferencial-box {
+    background-color: #000;
+    border-radius: 15px;
+    padding: 40px 30px;
+    text-align: center;
+    width: 300px;
+    transition: transform 0.3s ease;
+}
+
+.diferencial-box:hover {
+    transform: translateY(-10px);
+}
+
+.icon-circle {
+    width: 80px;
+    height: 80px;
+    background-color: #C69C6D;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto 25px auto;
+    box-shadow: 0 0 20px rgba(198, 156, 109, 0.4);
+}
+
+.icon-circle i {
+    color: #000;
+    font-size: 2rem;
+}
+
+.diferencial-box h3 {
+    font-size: 1.4rem;
+    margin-bottom: 15px;
+    color: #fff;
+}
+
+.diferencial-box p {
+    font-size: 1rem;
+    line-height: 1.6;
+    color: #ccc;
+}
+
+
+
+
 /*--------------------------------------------------
   SEÇÃO SOBRE NÓS
 --------------------------------------------------*/
+
+
 .about {
-    padding: 100px 0;
-    background-color: var(--bg-light);
-}
-
-.about-content {
+    padding: 100px 20px;
+    background-color: #000;
+    color: #e6e6e6
+  }
+  
+  .section-title {
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 60px;
+    color: #C69C6D;
+    position: relative;
+  }
+  
+  .about-content {
     display: flex;
-    gap: 50px;
+    flex-wrap: wrap;
+    gap: 40px;
     align-items: center;
-}
-
-.about-image {
+    justify-content: center;
+  }
+  
+  .about-image {
     flex: 1;
+    min-width: 280px;
+    max-width: 400px;
     border-radius: 10px;
     overflow: hidden;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
-}
-
-.about-text {
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.6);
+  }
+  
+  .about-image img {
+    width: 100%;
+    display: block;
+    object-fit: cover;
+  }
+  
+  .about-text {
     flex: 1;
-}
-
-.about-text h3 {
-    font-size: 1.8rem;
+    min-width: 300px;
+    max-width: 600px;
+  }
+  
+  .about-text h3 {
+    font-size: 2rem;
+    color: #ffffff;
     margin-bottom: 20px;
-    color: var(--primary-color);
-}
-
-.about-text p {
+  }
+  
+  .about-text p {
     margin-bottom: 20px;
     line-height: 1.8;
-}
-
-.social-link {
+    color: #e6e6e6;
+  }
+  
+  .social-link {
     display: inline-flex;
     align-items: center;
     gap: 10px;
-    color: var(--primary-color);
     font-weight: 600;
-    margin-top: 20px;
-    transition: all 0.3s ease;
-}
-
-.social-link:hover {
-    color: var(--secondary-color);
-}
-
-.social-link i {
+    color: #C69C6D;
+    font-size: 1rem;
+    text-decoration: none;
+    transition: 0.3s ease;
+  }
+  
+  .social-link i {
     font-size: 1.5rem;
-}
+  }
+  
+  .social-link:hover {
+    color: #ffffff;
+  }
 
 /*--------------------------------------------------
   SEÇÃO SERVIÇOS
 --------------------------------------------------*/
-.services {
+/*--------------------------------------------------
+  SEÇÃO SERVIÇOS
+--------------------------------------------------*/
+.servicos {
     padding: 100px 0;
-    background-color: var(--primary-color);
-    color: var(--text-light);
-}
-
-.services .section-title {
-    color: var(--text-light);
-}
-
-.services-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 30px;
-}
-
-.service-card {
-    background-color: rgba(255, 255, 255, 0.1);
-    border-radius: 10px;
-    padding: 30px;
+    background-color: #000;
+    color: #fff;
+  }
+  
+  .servicos .section-title {
     text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 60px;
+    color: #C69C6D;
+  }
+  
+  .servicos-lista {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 40px;
+    justify-content: space-between;
+  }
+  
+  .servico-item {
+    flex: 1;
+    min-width: 280px;
+    padding: 20px;
+    border-left: 4px solid #C69C6D;
     transition: all 0.3s ease;
-}
-
-.service-card:hover {
-    transform: translateY(-10px);
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
-}
-
-.service-icon {
-    font-size: 3rem;
-    color: var(--secondary-color);
-    margin-bottom: 20px;
-}
-
-.service-title {
+    background-color: #111;
+    border-radius: 20PX;
+  }
+  
+  .servico-item h3 {
     font-size: 1.5rem;
+    color: #fff;
     margin-bottom: 15px;
-}
-
+  }
+  
+  .servico-item p {
+    font-size: 1rem;
+    line-height: 1.8;
+    color: #ccc;
+  }
+  
+  .servico-item:hover {
+    transform: translateY(-5px);
+  }
 /*--------------------------------------------------
   SEÇÃO GALERIA
 --------------------------------------------------*/

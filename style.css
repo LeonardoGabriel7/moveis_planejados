@@ -103,7 +103,7 @@ img {
   HEADER E NAVEGAÇÃO
 --------------------------------------------------*/
 header {
-    background-color: var(--primary-color);
+    background-color: black;
     color: var(--text-light);
     position: fixed;
     top: 0;

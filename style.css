@@ -322,7 +322,7 @@ header {
 
 .about {
     padding: 100px 20px;
-    background-color: #000;
+    background-color: #111;
     color: #e6e6e6
   }
   
@@ -450,7 +450,7 @@ header {
 --------------------------------------------------*/
 .gallery {
     padding: 100px 0;
-    background-color: var(--bg-light);
+    background-color: black;
 }
 
 .gallery-grid {
@@ -514,7 +514,7 @@ header {
    Seção de Avaliações
 ----------------------------- */
 .testimonials-container {
-    background-color: #121212;
+    background-color: #000;
     color: white;
     padding: 60px 20px;
 }

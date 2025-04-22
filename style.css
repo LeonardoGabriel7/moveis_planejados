@@ -103,10 +103,6 @@ img {
   HEADER E NAVEGAÇÃO
 --------------------------------------------------*/
 
-
-/*-------------------------------
-  HEADER
--------------------------------*/
 header {
   background-color: #000;
   width: 100%;
@@ -115,6 +111,7 @@ header {
   transition: all 0.3s ease;
   position: relative; /* importante: não fixo */
   z-index: 999;
+  height: 100px;
 }
 
 .header-container {
@@ -215,14 +212,6 @@ header {
     display: none;
   }
 }
-
-
-
-
-
-
-
-
 
 
 

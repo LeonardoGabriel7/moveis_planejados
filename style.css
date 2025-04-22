@@ -745,7 +745,6 @@ header {
     background-color: #000;
     color: #fff;
     position: relative;
-    height: 750px;
   }
   
   .servicos::before {
@@ -762,7 +761,6 @@ header {
     text-align: center;
     font-size: 2.8rem;
     margin-bottom: 70px;
-   
     color: #C69C6D;
     font-weight: 300;
     letter-spacing: 2px;
@@ -947,7 +945,6 @@ header {
 .gallery {
     padding: 100px 0;
     background-color: black;
-    height: 920px;
 }
 
 .gallery-grid {

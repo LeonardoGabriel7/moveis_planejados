@@ -750,7 +750,30 @@ header {
   SEÇÃO GALERIA
 --------------------------------------------------*/
 
+.gallery-button-container {
+  text-align: center;
+  margin-top: 30px;
+}
 
+.gallery-button {
+  display: inline-block;
+  padding: 12px 30px;
+  background-color: #ffffff; /* ou a cor da sua identidade visual */
+  color: #C69C6D;
+  text-decoration: none;
+  font-weight: bold;
+  border-radius: 8px;
+  transition: background-color 0.3s ease;
+  border-radius: 30PX;
+  border: 2px solid #C69C6D;
+}
+
+.gallery-button:hover {
+  background-color: #ffffff;
+  color: #000;
+  scale: 1.1;
+  transition: 1s;
+}
 
 
 .gallery {

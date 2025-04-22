@@ -6,28 +6,30 @@
     <title>Di Reis Móveis Planejados</title>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script defer src="script.js"></script>
 </head>
 <body>
-    <!-- Header -->
     <header id="header">
         <div class="container header-container">
-            <img src="imagens/logo.jpeg" alt="Di Reis Móveis Planejados" class="logo">
-            <button class="hamburger" id="hamburger">
-                <i class="fas fa-bars"></i>
-            </button>
-            <nav>
-                <ul class="nav-menu" id="nav-menu">
-                    <li class="nav-item"><a href="#home">Home</a></li>
-                    <li class="nav-item"><a href="#services">Servicos</a></li>
-                    <li class="nav-item"><a href="#diferenciais">Diferenciais</a></li>
-                    <li class="nav-item"><a href="#gallery">Projetos</a></li>
-                    <li class="nav-item"><a href="#sobre">Sobre nós</a></li>
-                    <li class="nav-item"><a href="#avaliações">Avaliações</a></li>
-                    <li class="nav-item"><a href="#contact">Contato</a></li>
-                </ul>
-            </nav>
+          <img src="imagens/logo.jpeg" alt="Di Reis Móveis Planejados" class="logo">
+          
+          <nav id="nav">
+            <ul class="nav-menu" id="nav-menu">
+              <li class="nav-item"><a href="#home">Home</a></li>
+              <li class="nav-item"><a href="#services">Serviços</a></li>
+              <li class="nav-item"><a href="#diferenciais">Diferenciais</a></li>
+              <li class="nav-item"><a href="#gallery">Projetos</a></li>
+              <li class="nav-item"><a href="#sobre">Sobre nós</a></li>
+              <li class="nav-item"><a href="#avaliações">Avaliações</a></li>
+              <li class="nav-item"><a href="#contact">Contato</a></li>
+            </ul>
+          </nav>
+          
+          <button class="hamburger" id="hamburger" aria-label="Abrir Menu">
+            <i class="fas fa-bars"></i>
+          </button>
         </div>
-    </header>
+      </header>
 
 <!-- Hero Section -->
 <section class="hero" id="home">
@@ -322,54 +324,7 @@
 
 
 
-    <!-- Scripts -->
-    <script>
-        // Menu Hamburger
-        const hamburger = document.getElementById('hamburger');
-        const navMenu = document.getElementById('nav-menu');
-
-        hamburger.addEventListener('click', () => {
-            navMenu.classList.toggle('active');
-            hamburger.innerHTML = navMenu.classList.contains('active') ? 
-                '<i class="fas fa-times"></i>' : '<i class="fas fa-bars"></i>';
-        });
-
-        // Fechar menu ao clicar em um item
-        document.querySelectorAll('.nav-item').forEach(item => {
-            item.addEventListener('click', () => {
-                navMenu.classList.remove('active');
-                hamburger.innerHTML = '<i class="fas fa-bars"></i>';
-            });
-        });
-
-        // Header com fundo ao rolar
-        window.addEventListener('scroll', () => {
-            const header = document.getElementById('header');
-            if (window.scrollY > 100) {
-                header.style.padding = '10px 0';
-                header.style.backgroundColor = 'rgba(0, 0, 0, 0.9)';
-            } else {
-                header.style.padding = '20px 0';
-                header.style.backgroundColor = 'var(--primary-color)';
-            }
-        });
-
-        // Enviar mensagem para WhatsApp
-        function sendWhatsApp(e) {
-            e.preventDefault();
-            
-            const name = document.getElementById('name').value;
-            const email = document.getElementById('email').value;
-            const phone = document.getElementById('phone').value;
-            const message = document.getElementById('message').value;
-            
-            const text = `Olá, sou ${name}. E-mail: ${email}. Telefone: ${phone}. ${message}`;
-            const encodedText = encodeURIComponent(text);
-            
-            window.open(`https://wa.me/5511963291060?text=${encodedText}`, '_blank');
-            
-            document.getElementById('contactForm').reset();
-        }
+   
 
        
 

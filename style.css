@@ -367,6 +367,9 @@ header {
   width: 100%;
   height: 100%;
   z-index: 0;
+  will-change: opacity;
+  transform: translateZ(0); /* força renderização em camadas separadas */
+  pointer-events: none; /* evita que ele bloqueie toques */
 }
 
 .hero-slide {

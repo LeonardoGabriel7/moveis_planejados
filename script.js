@@ -48,29 +48,30 @@ if (window.scrollY > 100) {
         document.getElementById('contactForm').reset();
     }
 
-    const images = [
-      'imagens/3d1.jpeg',
-      'imagens/3d2.jpeg',
-      'imagens/3d3.jpeg',
-       'imagens/a.jpeg',
-    ];
+    document.addEventListener("DOMContentLoaded", function () {
+      const images = [
+        'imagens/3d1.jpeg',
+        'imagens/3d2.jpeg',
+        'imagens/3d3.jpeg'
+      ];
   
-    const container = document.createElement('div');
-    container.classList.add('hero-slideshow');
-    document.querySelector('.hero').appendChild(container);
+      const container = document.createElement('div');
+      container.classList.add('hero-slideshow');
+      document.querySelector('.hero').appendChild(container);
   
-    images.forEach((src, index) => {
-      const slide = document.createElement('div');
-      slide.classList.add('hero-slide');
-      if (index === 0) slide.classList.add('active');
-      slide.style.backgroundImage = `url(${src})`;
-      container.appendChild(slide);
+      images.forEach((src, index) => {
+        const slide = document.createElement('div');
+        slide.classList.add('hero-slide');
+        if (index === 0) slide.classList.add('active');
+        slide.style.backgroundImage = `url(${src})`;
+        container.appendChild(slide);
+      });
+  
+      let current = 0;
+      const slides = document.querySelectorAll('.hero-slide');
+      setInterval(() => {
+        slides[current].classList.remove('active');
+        current = (current + 1) % slides.length;
+        slides[current].classList.add('active');
+      }, 5000);
     });
-  
-    let current = 0;
-    const slides = document.querySelectorAll('.hero-slide');
-    setInterval(() => {
-      slides[current].classList.remove('active');
-      current = (current + 1) % slides.length;
-      slides[current].classList.add('active');
-    }, 5000); // troca a cada 5 segundos

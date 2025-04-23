@@ -355,7 +355,7 @@ header {
 
 @media (max-width: 768px) {
   .hero {
-    padding-top: 110px; /* aumenta o espaço no topo da hero */
+    padding-top: 80px; /* aumenta o espaço no topo da hero */
   }
 }
 

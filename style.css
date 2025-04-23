@@ -341,95 +341,101 @@ header {
   SEÇÃO HERO
 --------------------------------------------------*/
 .hero {
-    background: linear-gradient(to right, #1f1f1f, #000000);
-    height: 85vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: #f1f1f1;
-    text-align: center;
-    padding-top: 0px;
-    position: relative;
-    overflow: hidden;
-    padding-top: 80px;
- 
+  background: linear-gradient(to right, #1f1f1f, #000000);
+  height: 85vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #f1f1f1;
+  text-align: center;
+  padding-top: 80px;
+  position: relative;
+  overflow: hidden;
 }
 
 @media (max-width: 768px) {
-  .hero {
-    padding-top: 60px; /* aumenta o espaço no topo da hero */
-  }
+.hero {
+  padding-top: 60px; /* aumenta o espaço no topo da hero */
+}
 }
 
-
-.hero::after {
-  content: "";
+/* Slideshow no fundo */
+.hero-slideshow {
   position: absolute;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
-  background-image: url('imagens/3d3.jpeg'); 
-  background-size: cover;
-  background-position: center;
-  opacity: 0.4; 
   z-index: 0;
 }
 
+.hero-slide {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: center;
+  opacity: 0;
+  transition: opacity 1s ease-in-out;
+}
+
+.hero-slide.active {
+  opacity: 0.4; /* Opacidade do slide ativo */
+}
+
+/* Conteúdo da hero */
 .hero-content {
-    max-width: 800px;
-    margin: 0 auto;
-    z-index: 1;
-    position: relative;
+  max-width: 800px;
+  margin: 0 auto;
+  z-index: 1;
+  position: relative;
 }
 
 .hero-title {
-    font-size: 3.5rem;
-    font-weight: 700;
-    margin-bottom: 20px;
-    text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.6);
-    color: var(--secondary-color);
+  font-size: 3.5rem;
+  font-weight: 700;
+  margin-bottom: 20px;
+  text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.6);
+  color: var(--secondary-color);
 }
 
 .hero-subtitle {
-    font-size: 1.5rem;
-    margin-bottom: 30px;
-
-    color: #ccc;
+  font-size: 1.5rem;
+  margin-bottom: 30px;
+  color: #ccc;
 }
 
 .hero-buttons {
-    display: flex;
-    gap: 20px;
-    justify-content: center;
-    margin-top: 40px;
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  margin-top: 40px;
 }
 
 .btn {
-    background-color: #ffffff;
-    color: #000;
-    padding: 12px 25px;
-    border-radius: 30px;
-    font-weight: 600;
-    transition: all 0.3s ease;
-    text-decoration: none;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+  background-color: #ffffff;
+  color: #000;
+  padding: 12px 25px;
+  border-radius: 30px;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  text-decoration: none;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
 }
 
 .btn:hover {
-    background-color: #f0f0f0;
-    transform: scale(1.05);
+  background-color: #f0f0f0;
+  transform: scale(1.05);
 }
 
 .btn-dark {
-    background-color: #25D366;
-    color: white;
+  background-color: #25D366;
+  color: white;
 }
 
 .btn-dark:hover {
-    background-color: #1ebe59;
+  background-color: #1ebe59;
 }
-
 
 
 

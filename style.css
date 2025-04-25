@@ -835,6 +835,7 @@ header {
     flex-direction: column;
     position: relative;
     overflow: hidden;
+    border: 1px solid #C69C6D;
   }
   
   .servico-item::before {
@@ -1090,6 +1091,7 @@ header {
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
     position: relative;
+    border: 1px solid #C69C6D;
 }
 
 .testimonial-card:hover {
@@ -1201,6 +1203,7 @@ header {
   padding: 20px;
   border-radius: 12px;
   transition: all 0.3s ease;
+  border: 1px solid #C69C6D;
 }
 
 .contact-item:hover {
@@ -1292,85 +1295,107 @@ RESPONSIVIDADE
   FOOTER
 --------------------------------------------------*/
 footer {
-    background-color: #000000;
-    color: var(--text-light);
-    padding: 50px 0 20px;
+  background-color: #000000;
+  color: var(--text-light);
+  padding: 50px 0 20px;
 }
 
 .footer-content {
-    display: flex;
-    justify-content: space-between;
-    gap: 30px;
-    margin-bottom: 40px;
+  display: flex;
+  justify-content: space-between;
+  gap: 30px;
+  margin-bottom: 40px;
+  flex-wrap: wrap;
 }
 
 .footer-logo {
-    height: 60px;
-    margin-bottom: 20px;
+  height: 60px;
+  margin: 0 auto 20px;
+  display: block;
 }
 
 .footer-about {
-    flex: 2;
+  flex: 2;
 }
 
 .footer-about p {
-    margin-bottom: 20px;
-    line-height: 1.8;
+  margin-bottom: 20px;
+  line-height: 1.8;
 }
 
 .footer-links {
-    flex: 1;
+  flex: 1;
 }
 
 .footer-links h4 {
-    font-size: 1.2rem;
-    margin-bottom: 20px;
-    color: var(--secondary-color);
+  font-size: 1.2rem;
+  margin-bottom: 20px;
+  color: var(--secondary-color);
 }
 
 .footer-links ul li {
-    margin-bottom: 10px;
+  margin-bottom: 10px;
 }
 
 .footer-links ul li a {
-    transition: all 0.3s ease;
+  transition: all 0.3s ease;
 }
 
 .footer-links ul li a:hover {
-    color: var(--secondary-color);
-    padding-left: 5px;
+  color: var(--secondary-color);
+  padding-left: 5px;
 }
 
 .footer-contact {
-    flex: 1;
+  flex: 1;
 }
 
 .footer-social {
-    display: flex;
-    gap: 15px;
-    margin-top: 20px;
+  display: flex;
+  gap: 15px;
+  margin-top: 20px;
 }
 
 .social-icon {
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    width: 40px;
-    height: 40px;
-    background-color: rgba(255, 255, 255, 0.1);
-    border-radius: 50%;
-    transition: all 0.3s ease;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  background-color: rgba(255, 255, 255, 0.1);
+  border-radius: 50%;
+  transition: all 0.3s ease;
 }
 
 .social-icon:hover {
-    background-color: var(--secondary-color);
-    color: var(--primary-color);
+  background-color: var(--secondary-color);
+  color: var(--primary-color);
 }
 
 .footer-bottom {
-    text-align: center;
-    padding-top: 20px;
-    border-top: 1px solid rgba(255, 255, 255, 0.1);
+  text-align: center;
+  padding-top: 20px;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+/* Responsivo - Centralizar no mobile */
+@media (max-width: 768px) {
+  .footer-content {
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+  }
+
+  .footer-about,
+  .footer-links,
+  .footer-contact {
+      width: 100%;
+      max-width: 400px;
+  }
+
+  .footer-social {
+      justify-content: center;
+  }
 }
 
 /*--------------------------------------------------

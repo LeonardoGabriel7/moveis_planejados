@@ -432,12 +432,14 @@ header {
 }
 
 .btn-dark {
-  background-color: #25D366;
+  background-color: #000000;
   color: white;
+  border: 2px solid #C69C6D;
 }
 
 .btn-dark:hover {
-  background-color: #1ebe59;
+ color: #C69C6D;
+ background-color: #000;
 }
 
 
@@ -1374,26 +1376,37 @@ footer {
 /*--------------------------------------------------
   WHATSAPP FLUTUANTE
 --------------------------------------------------*/
-.whatsapp-float {
-    position: fixed;
-    bottom: 30px;
-    right: 30px;
-    background-color: #25d366;
-    color: white;
-    border-radius: 50%;
-    width: 60px;
-    height: 60px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 2rem;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
-    z-index: 1000;
-    transition: all 0.3s ease;
+/* Estilo base para botões flutuantes */
+.float-btn {
+  position: fixed;
+  right: 20px;
+  width: 65px;
+  height: 65px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 2rem;
+  color: white;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+  z-index: 1000;
+  transition: all 0.3s ease;
 }
 
-.whatsapp-float:hover {
-    transform: scale(1.1);
+/* Posição específica de cada botão */
+.whatsapp {
+  bottom: 30px;
+  background-color: #25d366;
+}
+
+.instagram {
+  bottom: 110px; /* espaço entre os botões */
+  background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fd5949 45%, #d6249f 60%, #285AEB 90%);
+}
+
+/* Hover animado */
+.float-btn:hover {
+  transform: scale(1.1);
 }
 
 /*--------------------------------------------------

@@ -52,7 +52,8 @@ if (window.scrollY > 100) {
       const images = [
         'imagens/3d1.jpeg',
         'imagens/3d2.jpeg',
-        'imagens/3d3.jpeg'
+        'imagens/3d3.jpeg',
+        'imagens/a.jpeg',
       ];
   
       const container = document.createElement('div');
